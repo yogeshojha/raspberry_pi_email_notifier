@@ -8,10 +8,11 @@ import string
 #Edit the details
 
 USERNAME = "kyampus.project@gmail.com"
-PASSWORD = "password"
+PASSWORD = "kyampusproject"
 
 #edit this parameter to change the speed of scrolling effect
 scroll_time = 0.5
+
 
 LCD_RS = 7
 LCD_E  = 8
@@ -40,16 +41,13 @@ def main():
   GPIO.setup(LCD_D5, GPIO.OUT)
   GPIO.setup(LCD_D6, GPIO.OUT)
   GPIO.setup(LCD_D7, GPIO.OUT)
-
-
   # Initialise display
   lcd_init()
-  lcd_string("Inbox",LCD_LINE_1)
-  lcd_string("Checking...", LCD_LINE_2)
   time.sleep(0.3)
+  temp = uc = 0
   while True:
-	lcd_string("Inbox",LCD_LINE_1)
-	lcd_string(" ",LCD_LINE_2)
+	lcd_string("    [Inbox]",LCD_LINE_1)
+	lcd_string("Checking...",LCD_LINE_2)
 	response = feedparser.parse("https://" + USERNAME + ":" + PASSWORD + "@mail.google.com/gmail/feed/atom")
 	unread_count = int(response["feed"]["fullcount"])
 	uc = str(unread_count)
