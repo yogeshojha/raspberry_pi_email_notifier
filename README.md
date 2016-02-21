@@ -21,8 +21,10 @@ Python script to check email and display them using a 16 X 2 lcd and Raspberry p
 <ul>
   <li>Feedparser</li>
 </ul>
+The python script uses the feedparser module to simplify interaction with Gmail
+
 Install Feedparser
-  ```linux
+  ```bash
   sudo pip install feedparser
   ```
 ##Wiring
@@ -137,3 +139,24 @@ Your circuit should look similar to this
 
 GPIO pinout for reference
 <a href="https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/">GPIO: MODELS A+, B+ AND RASPBERRY PI 2</a>
+
+##Installation
+```bash
+  $ git clone https://github.com/yogeshojha/raspberry_pi_email_notifier
+  $ cd raspberry_pi_email_notifier
+```
+##Changes to be made
+Change the username and password inside email.py
+```bash
+  $ nano email.py
+```
+Edit line 10 and 11 with your username and password
+```Python
+USERNAME = "yourusername@gmail.com"
+PASSWORD = "yourpassword"
+```
+
+##Usage
+```bash
+  $ sudo python email.py
+```
