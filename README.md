@@ -134,3 +134,6 @@ Install Feedparser
 Your circuit should look similar to this
 
 <img src="img/ckt.jpg"/>
+
+GPIO pinout for reference
+<a href="https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/">GPIO: MODELS A+, B+ AND RASPBERRY PI 2</a>
