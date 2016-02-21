@@ -130,3 +130,7 @@ Install Feedparser
     <td>02</td>
   </tr>
 </table>
+
+Your circuit should look similar to this
+
+<img src="img/ckt.jpg"/>
